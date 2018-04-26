@@ -1,10 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'skeleton.html.twig' %}
 
 {% block title %}Edit News{% endblock %}
+{% block heading %}<h1>Edit News</h1>{% endblock %}
 
-{% block body %}
-    <h1>Edit News</h1>
-
+{% block main %}
     {{ include('news/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('news_index') }}">back to list</a>

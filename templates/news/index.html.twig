@@ -1,10 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'skeleton.html.twig' %}
 
 {% block title %}News index{% endblock %}
+{% block heading %}<h1>News index</h1>{% endblock %}
 
-{% block body %}
-    <h1>News index</h1>
-
+{% block main %}
     <table class="table">
         <thead>
             <tr>
@@ -22,7 +21,7 @@
                 <td>{{ news.id }}</td>
                 <td>{{ news.headline }}</td>
                 <td>{{ news.body }}</td>
-                <td>{{ news.date }}</td>
+                <td>{{ news.date|date("m/d/Y H:M") }}</td>
                 <td>{{ news.category }}</td>
                 <td>
                     <a href="{{ path('news_show', {'id': news.id}) }}">show</a>

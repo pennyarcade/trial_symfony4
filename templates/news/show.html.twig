@@ -1,10 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'skeleton.html.twig' %}
 
 {% block title %}News{% endblock %}
+{% block heading %}    <h1>News</h1>{% endblock %}
 
-{% block body %}
-    <h1>News</h1>
-
+{% block main %}
     <table class="table">
         <tbody>
             <tr>
@@ -21,7 +20,7 @@
             </tr>
             <tr>
                 <th>Date</th>
-                <td>{{ news.date }}</td>
+                <td>{{ news.date|date("m/d/Y H:M") }}</td>
             </tr>
             <tr>
                 <th>Category</th>
