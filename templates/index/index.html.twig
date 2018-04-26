@@ -8,7 +8,7 @@
         <h3 title="{{ category.id }}">{{ category.name }}</h3>
         <ul>
         {% for news in news %}
-            {% if news.category == category.id%}
+            {% if news.category.id == category.id%}
             <li>
                 <h4 title="{{ news.id }}">{{ news.headline }} ({{ news.date|date("m/d/Y H:M") }})</h4>
                 <p>{{ news.body }}</p>
